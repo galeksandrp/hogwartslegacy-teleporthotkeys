@@ -71,7 +71,7 @@ function To_WaypointMapMarker()
   local PathManager = FindFirstOf('PathNavigationManager')
   local MissLoc		= PathManager:GetMissionDestinationLocation()
   
-  ExecuteInGameThread(function()
+
     if MissLoc.X ~= 0 and MissLoc.Y ~= 0 then
       ClearMissionPath()
     end
@@ -94,7 +94,7 @@ function To_WaypointMapMarker()
     else
 	  UIManager:SetAndShowHintMessage("  Teleport Hotkeys: \n NO WAYMARK PIN FOUND !", MsgPos, true, 8)
     end
-  end)
+
 end
 
 --------------------- TELEPORT: MISSION MARKER 
@@ -106,7 +106,7 @@ function To_MissionMarker()
   
   local FixedDest3 	= {	['X'] = MissLoc.X, ['Y'] = MissLoc.Y, ['Z'] = MissLoc.Z }
   						
-  ExecuteInGameThread(function()
+
     if PathManager:HasDestinationLocation(false) then
   	
       if MissLoc.X ~= 0 and MissLoc.Y ~= 0 then
@@ -118,20 +118,20 @@ function To_MissionMarker()
     else
       UIManager:SetAndShowHintMessage("  Teleport Hotkeys: \n NO MISSION TRACKED FOUND \nOR THE MISSION HAS NO LOCATION", MsgPos, true, 8)
   	end
-  end)
+
 end
 
 --------------------- TELEPORT: CLOSEST UNLOCKED SAVE LOCATION TO PLAYER
 function To_SafeLocation()
   local FastTravel = FindFirstOf('FastTravelManager')
-  ExecuteInGameThread(function()
+
     FastTravel:StartFastTravelToClosestUnlockedSaveLocationToPlayer()
-  end)
+
 end
 
 --------------------- TELEPORT: FORWARD
 function To_Forward()
-  ExecuteInGameThread(function()
+
 	local Player 		= FindFirstOf('Biped_Player')
 	local UIManager		= FindFirstOf('UIManager')
 	local FastTravel 	= FindFirstOf('FastTravelManager')
@@ -162,7 +162,7 @@ function To_Forward()
 		UIManager:SetAndShowHintMessage(stuckMsg, MsgPos, true, 10)
 		msgShown = true
 	end
-  end)
+
 end
 
 
