@@ -28,7 +28,7 @@
 - Key.SCROLL_LOCK
 - Key.LEFT_WIN
 - Key.RIGHT_WIN
-[Numbers + Numpad]
+[Numbers & Numpad]
 - Key.NUM_ZERO
 - Key.NUM_ONE
 - Key.NUM_TWO

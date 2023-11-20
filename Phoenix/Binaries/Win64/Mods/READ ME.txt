@@ -1,25 +1,33 @@
  > TELEPORT HOTKEYS <
+https://www.nexusmods.com/hogwartslegacy/mods/1289
 QoL Hotkeys for direct teleport to a waypoint, map marker or tracked mission.
 
 
-------- SETUP
-1) Install first "RE-UE4SS" - https://www.nexusmods.com/hogwartslegacy/mods/942
-2) Place "TeleportHotkeys" folder inside RE-UE4SS Mods folder:
+- SETUP:
 
+1) Install first "RE-UE4SS" - https://www.nexusmods.com/hogwartslegacy/mods/942
+
+2) Place "TeleportHotkeys" folder inside RE-UE4SS Mods folder:
    <install directory> \Phoenix\Binaries\Win64\Mods\TeleportHotkeys
 
+3) DONE.
 
------- CUSTOMIZE THE KEYS
+
+
+- [OPTIONAL] CUSTOMIZE THE KEYS:
+
 All available Keys are inside "Available Keys.txt".
 
 1) After the setup, go inside "<install directory> \Phoenix\Binaries\Win64\Mods\TeleportHotkeys\Scripts"
 
-2) Open the file "main.lua" with a text editor and follow the instructions.
+2) Open the file "main.lua" with a text editor like notepad.
+
+3) Replace the hotkey after the "=" symbol with one of those found inside "Available Keys.txt"
 	Ex.
 	DEFAULT: waypointKey = Key.PAGE_UP
 	EDITED: waypointKey = Key.F4
 
-3) Optional, to disable the pop-up message:
+4) To enable the pop-up message:
 	Ex.
-	DEFAULT: showHotkeysPopUp = true
-	EDITED: showHotkeysPopUp = false
+	DEFAULT: showHotkeysPopUp = false
+	EDITED: showHotkeysPopUp = true
