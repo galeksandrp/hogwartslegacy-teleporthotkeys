@@ -174,7 +174,7 @@
 
 MODIFIER KEYS:
 If you know what you are doing, use these 3 only with the modifier (KeyModifier), otherwise the game crashes
-- ModifierKey.SHIFT
-- ModifierKey.CONTROL
-- ModifierKey.ALT
+- {ModifierKey.SHIFT}
+- {ModifierKey.CONTROL}
+- {ModifierKey.ALT}
 
