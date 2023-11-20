@@ -1,4 +1,4 @@
--- TELEPORT HOTKEYS
+-- TELEPORT HOTKEYS - https://www.nexusmods.com/hogwartslegacy/mods/1289
 -- KEY CUSTOMIZATION: see "Available Keys.txt" inside the zip for available keys
 
 
@@ -24,20 +24,13 @@ safeTelportKey = Key.HOME
 showHotkeysPopUp = true 
 
 
-----------------------------------------------------------------------------------------------
------------ D O  N O T   M O D I F Y   B E L O W  --------------------------------------------
-----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------
+----------- D O  N O T   M O D I F Y   B E L O W  --------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------
 
 
 local scriptStart 	= false
 KeysTable			= require("./Mods/TeleportHotkeys/Scripts/KeysTable")
-
---UIManager 	= FindFirstOf("UIManager")
---FastTravel 	= FindFirstOf("FastTravelManager")
---PathManager = FindFirstOf("PathNavigationManager")
---
---FastTravel 			= FindFirstOf("FastTravelManager")
---UIManager 			= FindFirstOf("UIManager")
 MsgPos 				= nil
 KeyModifier			= ModifierKey.ALT
 
@@ -52,7 +45,7 @@ RegisterKeyBind(waypointKey, {KeyModifier}, function()
 		local MissLoc		= PathManager:GetMissionDestinationLocation()
 		
 		if MissLoc.X ~= 0 and MissLoc.Y ~= 0 then
-			UIManager:SetAndShowHintMessage("  Teleport Hotkeys: \n UNABLE TO TELEPORT TO A WAYPOINT \nWHILE TRACKING A MISSION. \nUNTRACK THE MISSIONG AND RETRY.", MsgPos, true, 15)
+			UIManager:SetAndShowHintMessage("  Teleport Hotkeys: \n UNABLE TO TELEPORT TO A WAYPOINT \nWHILE TRACKING A MISSION. \nUNTRACK THE MISSIONG AND RETRY.", MsgPos, true, 8)
 			return
 		end
 		
@@ -82,7 +75,7 @@ RegisterKeyBind(waypointKey, {KeyModifier}, function()
 				
 			end
 		else
-			UIManager:SetAndShowHintMessage("  Teleport Hotkeys: \n NO WAYMARK PIN FOUND !", MsgPos, true, 10)
+			UIManager:SetAndShowHintMessage("  Teleport Hotkeys: \n NO WAYMARK PIN FOUND !", MsgPos, true, 8)
 		end
 	end)
 end)
@@ -108,10 +101,10 @@ RegisterKeyBind(missionKey, {KeyModifier}, function()
 				MissLoc = nil --saved destination reset
 				--print("\n  - Teleport Hotkeys: Used FixedDest3")
 			else
-				UIManager:SetAndShowHintMessage("  Teleport Hotkeys: \n YOU'RE NOT TRACKING A MISSION !", MsgPos, true, 10)
+				UIManager:SetAndShowHintMessage("  Teleport Hotkeys: \n YOU'RE NOT TRACKING A MISSION !", MsgPos, true, 8)
 			end
 		else
-			UIManager:SetAndShowHintMessage("  Teleport Hotkeys: \n NO MISSION TRACKED FOUND \nOR THE MISSION HAS NO LOCATION", MsgPos, true, 10)
+			UIManager:SetAndShowHintMessage("  Teleport Hotkeys: \n NO MISSION TRACKED FOUND \nOR THE MISSION HAS NO LOCATION", MsgPos, true, 8)
 		
 		end
 	end)
